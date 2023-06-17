@@ -1,0 +1,7 @@
+C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\bin\Debug\ToyRobotPuzzle.exe.config
+C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\bin\Debug\ToyRobotPuzzle.exe
+C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\bin\Debug\ToyRobotPuzzle.pdb
+C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\obj\Debug\ToyRobotPuzzle.csproj.AssemblyReference.cache
+C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\obj\Debug\ToyRobotPuzzle.csproj.CoreCompileInputs.cache
+C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\obj\Debug\ToyRobotPuzzle.exe
+C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\obj\Debug\ToyRobotPuzzle.pdb
