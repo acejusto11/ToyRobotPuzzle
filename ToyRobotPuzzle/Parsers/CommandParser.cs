@@ -1,6 +1,5 @@
 ﻿using System;
 using ToyRobotPuzzle.Helpers;
-using System.Linq;
 
 namespace ToyRobotPuzzle
 {

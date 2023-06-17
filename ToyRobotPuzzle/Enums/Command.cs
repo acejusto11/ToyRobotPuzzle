@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ToyRobotPuzzle
+﻿namespace ToyRobotPuzzle
 {
     public enum Command
     {
@@ -13,6 +7,5 @@ namespace ToyRobotPuzzle
         RIGHT,
         LEFT, 
         REPORT,
-        NONE
     }
 }
