@@ -25,14 +25,15 @@ namespace ToyRobotPuzzle
             switch (command)
             {
                 case Command.PLACE:
-                    var placeCommandValue = commandParser.GetParsedValues(commands);
+                    var placeCommandValue = commandParser.GetParsedPositionValues(commands);
                     var robotValidator = new RobotValidator(Dimension);
 
                     robotValidator.ValidatePlace(placeCommandValue.Position, placeCommandValue.Direction);
                     Robot.Place(placeCommandValue.Position, placeCommandValue.Direction);
-
                     break;
-
+                case Command.MOVE:
+                    Robot.Move(Robot.Position, Robot.Direction);
+                    break;
                 case Command.REPORT:
                     var result = $"The current position of the robot: {Robot?.Position?.X},{Robot?.Position?.Y} {Robot.Direction}";
                     break;

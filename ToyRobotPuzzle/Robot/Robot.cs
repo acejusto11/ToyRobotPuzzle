@@ -6,13 +6,30 @@ namespace ToyRobotPuzzle
     public class Robot : IRobot
     {
         public Position Position { get; set; }
-
-        [DefaultValue(Direction.SOUTH)]
         public Direction Direction { get; set; }
 
-        public void Move()
+        private IDimension dimension;
+        public Robot(IDimension dimension) 
         {
-            throw new NotImplementedException();
+            this.dimension = dimension;
+        }
+
+        public void Move(Position position, Direction direction)
+        {
+            switch (direction) {
+                case Direction.NORTH:
+                    position.Y = position.Y < dimension.Columns ? position.Y + 1:  position.Y;
+                    break;
+                case Direction.EAST:
+                    position.X = position.X < dimension.Rows ? position.X + 1: position.X;
+                    break;
+                case Direction.SOUTH:
+                    position.Y = position.Y > 0 ? position.Y - 1: position.Y;
+                    break;
+                case Direction.WEST:
+                    position.X = position.X > 0 ? position.X - 1: position.X;
+                    break;
+            }
         }
 
         public void Place(Position position, Direction direction)

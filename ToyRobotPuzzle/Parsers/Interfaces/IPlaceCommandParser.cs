@@ -2,6 +2,6 @@
 {
     public interface IPlaceCommandParser
     {
-        CommandValue GetParsedValues(string[] input);
+        CommandValue GetParsedPositionValues(string[] input);
     }
 }
