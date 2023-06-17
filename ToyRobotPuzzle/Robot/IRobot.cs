@@ -1,0 +1,12 @@
+﻿namespace ToyRobotPuzzle
+{
+    public interface IRobot
+    {
+        Position Position { get; set; }
+        Direction Direction { get; set; }
+        void Place(Position position, Direction direction);
+        void Move(Position position, Direction direction);
+        void RotateLeft();
+        void RotateRight();
+    }
+}
