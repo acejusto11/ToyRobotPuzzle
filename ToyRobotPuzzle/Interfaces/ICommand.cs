@@ -8,6 +8,6 @@ namespace ToyRobotPuzzle.Interfaces
 {
     public interface ICommand
     {
-        void Process();
+        void Process(string inputCommand);
     }
 }

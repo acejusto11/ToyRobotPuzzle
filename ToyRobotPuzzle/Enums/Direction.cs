@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ToyRobotPuzzle
 {
-    public interface IRobot
+    public enum Direction
     {
-        void Place(int x, int y, Direction direction);
-        void Move();
-        void RotateLeft();
-        void RotateRight();
+        NORTH,
+        SOUTH,
+        EAST,
+        WEST,
     }
 }

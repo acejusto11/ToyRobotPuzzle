@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,9 @@ namespace ToyRobotPuzzle
 {
     public class Robot : IRobot
     {
-        public int X { get; set; }
-        public int Y { get; set; }
-        public bool IsPlaced { get; set; }
+        public Position Position { get; set; }
+
+        [DefaultValue(Direction.SOUTH)]
         public Direction Direction { get; set; }
 
         public void Move()
@@ -18,14 +19,10 @@ namespace ToyRobotPuzzle
             throw new NotImplementedException();
         }
 
-        public void Place(int x, int y, Direction direction)
+        public void Place(Position position, Direction direction)
         {
-            if (x > 0 && y > 0 && direction != Direction.NONE) 
-            {
-                this.X = x;
-                this.Y = y;
-                this.Direction = direction;
-            }
+            this.Position = position;
+            this.Direction = direction;
         }
 
         public void RotateLeft()

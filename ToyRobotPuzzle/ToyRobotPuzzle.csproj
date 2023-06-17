@@ -43,16 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command.cs" />
-    <Compile Include="Direction.cs" />
-    <Compile Include="Helpers\CommandParsers.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Table\IDimension.cs" />
+    <Compile Include="Enums\Command.cs" />
+    <Compile Include="Parsers\CommandValue.cs" />
+    <Compile Include="Enums\Direction.cs" />
+    <Compile Include="Parsers\CommandParser.cs" />
+    <Compile Include="Parsers\Interfaces\IBasicParser.cs" />
+    <Compile Include="Parsers\Interfaces\IPlaceCommandParser.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
-    <Compile Include="Interfaces\IRobot.cs" />
+    <Compile Include="Table\TableDimension.cs" />
+    <Compile Include="Robot\IRobot.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Robot.cs" />
-    <Compile Include="RobotSimulator.cs" />
-    <Compile Include="RobotValidator.cs" />
+    <Compile Include="Robot\Robot.cs" />
+    <Compile Include="Simulator.cs" />
+    <Compile Include="Robot\RobotValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace ToyRobotPuzzle
 {
-    public enum Direction
+    public interface IDimension
     {
-        NORTH,
-        SOUTH,
-        EAST,
-        WEST,
-        NONE
+        int Columns { get; set; }
+        int Rows { get; set; }
     }
 }

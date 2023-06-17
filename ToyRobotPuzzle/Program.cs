@@ -10,18 +10,24 @@ namespace ToyRobotPuzzle
     {
         static void Main(string[] args)
         {
-            var run = true;
-
+            var running = true;
             var robot = new Robot();
+            var dimension = new TableDimension(Constants.RobotDimensionColumn, Constants.RobotDimensionRows);
+            var robotSimulator = new Simulator(robot, dimension);
 
-            while (run) 
+            while (running) 
             { 
                 Console.WriteLine("Please enter your command");
                 var input = Console.ReadLine();
 
-                var robotSimulator = new RobotSimulator(input);
-
-                robotSimulator.Process();
+                try
+                {
+                    robotSimulator.Process(input);
+                }
+                catch (Exception ex) 
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
         }
     }
