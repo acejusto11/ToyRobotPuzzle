@@ -15,11 +15,13 @@ namespace ToyRobotPuzzle
             this.Validator = validator;
         }
 
-        public void Process(string inputCommand)
+        public Result Process(string inputCommand)
         {
             var commandParser = new CommandParser();
             var commands = inputCommand.Split(' ');
             var command = commandParser.GetCommand(commands);
+
+            var resultMessage = new Result();
 
             if (Robot.Position == null && command != Command.PLACE)
                 throw new System.Exception("Please use the PLACE command first before proceeding to other commands");
@@ -42,10 +44,10 @@ namespace ToyRobotPuzzle
                     Robot.Right();
                     break;
                 case Command.REPORT:
-                    var result = $"The current position of the robot: {Robot?.Position?.X},{Robot?.Position?.Y} {Robot.Direction}";
+                    resultMessage.Message = $"The current position of the robot: {Robot?.Position?.X},{Robot?.Position?.Y} {Robot.Direction}";
                     break;
-
             }
+            return resultMessage;
         }
     }
 }

@@ -7,9 +7,7 @@ namespace ToyRobotPuzzle
     {
         public Command GetCommand(string[] input)
         {
-            Command command;
-            Enum.TryParse(input[0], out command);
-            return command;
+            return (Command)Enum.Parse(typeof(Command), input[0], false);
         }
 
         public CommandValue GetParsedPositionValues(string[] input)

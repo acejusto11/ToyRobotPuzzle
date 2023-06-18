@@ -13,13 +13,20 @@ namespace ToyRobotPuzzle
             var robotSimulator = new Simulator(robot, dimension, robotValidator);
 
             while (running) 
-            { 
-                Console.WriteLine("Please enter your command");
+            {
+                Console.WriteLine($"{Environment.NewLine}Use the following commands to move the robot:");
+                Console.WriteLine("PLACE <X>,<Y>,<DIRECTION>");
+                Console.WriteLine("MOVE");
+                Console.WriteLine("LEFT");
+                Console.WriteLine("RIGHT");
+                Console.WriteLine($"{Environment.NewLine}Please enter your command");
                 var input = Console.ReadLine();
 
                 try
                 {
-                    robotSimulator.Process(input);
+                    var result = robotSimulator.Process(input);
+                    if (result.Message?.Length > 0)
+                        Console.WriteLine(result.Message);
                 }
                 catch (Exception ex) 
                 {

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Robot\IValidator.cs" />
+    <Compile Include="Result.cs" />
     <Compile Include="Table\IDimension.cs" />
     <Compile Include="Enums\Command.cs" />
     <Compile Include="Parsers\CommandValue.cs" />
@@ -59,7 +60,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Robot\Robot.cs" />
-    <Compile Include="Simulator.cs" />
+    <Compile Include="Simulator\Simulator.cs" />
     <Compile Include="Robot\RobotValidator.cs" />
   </ItemGroup>
   <ItemGroup>

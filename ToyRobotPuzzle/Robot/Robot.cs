@@ -40,12 +40,12 @@ namespace ToyRobotPuzzle
 
         public void Left()
         {
-            throw new NotImplementedException();
+            this.Direction = this.Direction == Direction.NORTH ? Direction.WEST : (Direction)Convert.ToInt32(this.Direction) - 1;
         }
 
         public void Right()
         {
-            throw new NotImplementedException();
+            this.Direction = this.Direction == Direction.WEST ? Direction.NORTH : (Direction)Convert.ToInt32(this.Direction) + 1;
         }
     }
 }
