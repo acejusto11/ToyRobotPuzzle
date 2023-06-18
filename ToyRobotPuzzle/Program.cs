@@ -9,7 +9,8 @@ namespace ToyRobotPuzzle
             var running = true;
             var dimension = new TableDimension(Constants.RobotDimensionColumn, Constants.RobotDimensionRows);
             var robot = new Robot(dimension);
-            var robotSimulator = new Simulator(robot, dimension);
+            var robotValidator = new RobotValidator(dimension);
+            var robotSimulator = new Simulator(robot, dimension, robotValidator);
 
             while (running) 
             { 

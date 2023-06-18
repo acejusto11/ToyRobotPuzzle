@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Robot\IValidator.cs" />
     <Compile Include="Table\IDimension.cs" />
     <Compile Include="Enums\Command.cs" />
     <Compile Include="Parsers\CommandValue.cs" />

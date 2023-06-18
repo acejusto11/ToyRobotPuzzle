@@ -14,20 +14,20 @@ namespace ToyRobotPuzzle
             this.dimension = dimension;
         }
 
-        public void Move(Position position, Direction direction)
+        public void Move()
         {
-            switch (direction) {
+            switch (Direction) {
                 case Direction.NORTH:
-                    position.Y = position.Y < dimension.Columns ? position.Y + 1:  position.Y;
+                    Position.Y = Position.Y < dimension.Columns ? Position.Y + 1: Position.Y;
                     break;
                 case Direction.EAST:
-                    position.X = position.X < dimension.Rows ? position.X + 1: position.X;
+                    Position.X = Position.X < dimension.Rows ? Position.X + 1: Position.X;
                     break;
                 case Direction.SOUTH:
-                    position.Y = position.Y > 0 ? position.Y - 1: position.Y;
+                    this.Position.Y = Position.Y > 0 ? Position.Y - 1: Position.Y;
                     break;
                 case Direction.WEST:
-                    position.X = position.X > 0 ? position.X - 1: position.X;
+                    this.Position.X = Position.X > 0 ? Position.X - 1: Position.X;
                     break;
             }
         }
@@ -38,12 +38,12 @@ namespace ToyRobotPuzzle
             this.Direction = direction;
         }
 
-        public void RotateLeft()
+        public void Left()
         {
             throw new NotImplementedException();
         }
 
-        public void RotateRight()
+        public void Right()
         {
             throw new NotImplementedException();
         }

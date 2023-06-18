@@ -6,11 +6,13 @@ namespace ToyRobotPuzzle
     {
         private IRobot Robot;
         private IDimension Dimension;
+        private IValidator Validator;
 
-        public Simulator(IRobot robot, IDimension dimension)
+        public Simulator(IRobot robot, IDimension dimension, IValidator validator)
         {
             this.Robot = robot;
             this.Dimension = dimension;
+            this.Validator = validator;
         }
 
         public void Process(string inputCommand)
@@ -26,13 +28,18 @@ namespace ToyRobotPuzzle
             {
                 case Command.PLACE:
                     var placeCommandValue = commandParser.GetParsedPositionValues(commands);
-                    var robotValidator = new RobotValidator(Dimension);
 
-                    robotValidator.ValidatePlace(placeCommandValue.Position, placeCommandValue.Direction);
+                    Validator.ValidatePlace(placeCommandValue.Position, placeCommandValue.Direction);
                     Robot.Place(placeCommandValue.Position, placeCommandValue.Direction);
                     break;
                 case Command.MOVE:
-                    Robot.Move(Robot.Position, Robot.Direction);
+                    Robot.Move();
+                    break;
+                case Command.LEFT:
+                    Robot.Left();
+                    break;
+                case Command.RIGHT:
+                    Robot.Right();
                     break;
                 case Command.REPORT:
                     var result = $"The current position of the robot: {Robot?.Position?.X},{Robot?.Position?.Y} {Robot.Direction}";

@@ -2,7 +2,7 @@
 
 namespace ToyRobotPuzzle
 {
-    public class RobotValidator
+    public class RobotValidator: IValidator
     {
         private IDimension dimension;
         public RobotValidator(IDimension dimension) 
