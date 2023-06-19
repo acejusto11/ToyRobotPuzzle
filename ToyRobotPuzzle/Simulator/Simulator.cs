@@ -44,7 +44,7 @@ namespace ToyRobotPuzzle
                     Robot.Right();
                     break;
                 case Command.REPORT:
-                    resultMessage.Message = $"The current position of the robot: {Robot?.Position?.X},{Robot?.Position?.Y} {Robot.Direction}";
+                    resultMessage.Message = $"***** The current position of the robot: {Robot?.Position?.X},{Robot?.Position?.Y} {Robot.Direction} *****";
                     break;
             }
             return resultMessage;

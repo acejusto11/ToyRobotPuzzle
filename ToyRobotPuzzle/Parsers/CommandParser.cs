@@ -16,18 +16,19 @@ namespace ToyRobotPuzzle
             Position position = null;
             Direction direction;
 
-            var placeCommands = input[1].Split(new[] { ',', ' ' });
-
-
             if (input.Length != 2)
                 throw new Exception("Place command is incomplete. Format should be: PLACE X,Y,DIRECTION");
+
+            var placeCommands = input[1].Split(new[] { ',', ' ' });
+
             if (placeCommands.Length != placeCommandParameter)
                 throw new Exception("Invalid number of parameters. Format should be: PLACE X,Y,DIRECTION");
             if (!Enum.TryParse(placeCommands[2], out direction))
                 throw new Exception("Invalid Direction. Values should be NORTH,EAST,SOUTH,WEST");
 
-            int x = Convert.ToInt32(placeCommands[0]);
-            int y = Convert.ToInt32(placeCommands[1]);
+
+            var x = Convert.ToInt32(placeCommands[0]);
+            var y = Convert.ToInt32(placeCommands[1]);
 
             position = new Position(x, y);
 
