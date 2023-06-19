@@ -2,6 +2,8 @@
 {
     public interface IValidator
     {
-        void ValidatePlace(Position position, Direction direction);
+        void ValidatePlaceParameters(Position position, Direction direction);
+        void CheckIfRobotIsInPlace(Position position, Command command);
+
     }
 }

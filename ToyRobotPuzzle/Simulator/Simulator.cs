@@ -23,15 +23,14 @@ namespace ToyRobotPuzzle
 
             var resultMessage = new Result();
 
-            if (Robot.Position == null && command != Command.PLACE)
-                throw new System.Exception("Please use the PLACE command first before proceeding to other commands");
+            Validator.CheckIfRobotIsInPlace(Robot.Position, command);
 
             switch (command)
             {
                 case Command.PLACE:
                     var placeCommandValue = commandParser.GetParsedPositionValues(commands);
 
-                    Validator.ValidatePlace(placeCommandValue.Position, placeCommandValue.Direction);
+                    Validator.ValidatePlaceParameters(placeCommandValue.Position, placeCommandValue.Direction);
                     Robot.Place(placeCommandValue.Position, placeCommandValue.Direction);
                     break;
                 case Command.MOVE:

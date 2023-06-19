@@ -9,7 +9,14 @@ namespace ToyRobotPuzzle
         {
             this.dimension = dimension;
         }
-        public void ValidatePlace(Position position, Direction direction) 
+
+        public void CheckIfRobotIsInPlace(Position position, Command command)
+        {
+            if (position == null && command != Command.PLACE)
+                throw new System.Exception("Please use the PLACE command first before proceeding to other commands");
+        }
+
+        public void ValidatePlaceParameters(Position position, Direction direction)
         {
             var isOutOFDimension = position.X > dimension.Columns || position.Y > dimension.Rows;
 
