@@ -17,15 +17,14 @@ namespace ToyRobotPuzzle
             Direction direction;
 
             if (input.Length != 2)
-                throw new Exception("Place command is incomplete. Format should be: PLACE X,Y,DIRECTION");
+                throw new Exception(ErrorMessages.IncompletePlaceCommand);
 
             var placeCommands = input[1].Split(new[] { ',', ' ' });
 
             if (placeCommands.Length != placeCommandParameter)
-                throw new Exception("Invalid number of parameters. Format should be: PLACE X,Y,DIRECTION");
+                throw new Exception(ErrorMessages.IncompletePlaceParameters);
             if (!Enum.TryParse(placeCommands[2], out direction))
-                throw new Exception("Invalid Direction. Values should be NORTH,EAST,SOUTH,WEST");
-
+                throw new Exception(ErrorMessages.InvalidPlaceDirection);
 
             var x = Convert.ToInt32(placeCommands[0]);
             var y = Convert.ToInt32(placeCommands[1]);

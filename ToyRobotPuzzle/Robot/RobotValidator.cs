@@ -13,7 +13,7 @@ namespace ToyRobotPuzzle
         public void CheckIfRobotIsInPlace(Position position, Command command)
         {
             if (position == null && command != Command.PLACE)
-                throw new System.Exception("Please use the PLACE command first before proceeding to other commands");
+                throw new Exception(ErrorMessages.RobotIsNotInPlace);
         }
 
         public void ValidatePlaceParameters(Position position, Direction direction)
@@ -22,7 +22,7 @@ namespace ToyRobotPuzzle
 
             if (isOutOFDimension || position.X < 0 || position.Y < 0)
             {
-                throw new Exception("Invalid Place Parameter Position");
+                throw new Exception(ErrorMessages.IncompletePlaceParameterPosition);
             }
         }
     }
