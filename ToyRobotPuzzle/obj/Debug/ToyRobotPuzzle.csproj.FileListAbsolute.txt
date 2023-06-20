@@ -5,3 +5,4 @@ C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\obj\Debug\ToyRobotPuzzle.
 C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\obj\Debug\ToyRobotPuzzle.csproj.CoreCompileInputs.cache
 C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\obj\Debug\ToyRobotPuzzle.exe
 C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\obj\Debug\ToyRobotPuzzle.pdb
+C:\Ace\ToyRobotChallenge\ToyRobotPuzzle\ToyRobotPuzzle\obj\Debug\ToyRobotPuzzle.csproj.SuggestedBindingRedirects.cache
